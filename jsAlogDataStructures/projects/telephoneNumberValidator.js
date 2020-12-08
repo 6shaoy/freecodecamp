@@ -1,7 +1,6 @@
 function telephoneCheck(str) {
-  if (str.charAt(0) == '-') return false;
-  var newStr = str.replaceAll('-', '').replaceAll(' ', '');
-  var regEx = /(^\d{10}$)|(^\(\d{3}\)\d{7}$)|(^1\(\d{3}\)\d{7}$)|(^1\d{10}$)/;
+  var newStr = str.replaceAll(' ', '');
+  var regEx = /(^\d{3}[-]?\d{3}[-]?\d{4}$)|(^\(\d{3}\)[-]?\d{3}[-]?\d{4}$)|(^1\(\d{3}\)[-]?\d{3}[-]?\d{4}$)|(^1\d{3}[-]?\d{3}[-]?\d{4}$)/;
   return regEx.test(newStr);
 }
 
